@@ -445,6 +445,72 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── Configuration ─── */}
+      <section id="config" className="py-24 border-t border-gh-border">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-4">
+            Configuration
+          </h2>
+          <p className="text-gh-muted text-center mb-12 max-w-2xl mx-auto">
+            Works zero-config out of the box. For project-specific needs, add a{" "}
+            <code className="text-gh-yellow font-mono">.wtcrc.json</code> or a{" "}
+            <code className="text-gh-yellow font-mono">&quot;wtc&quot;</code> key
+            in your package.json.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6 items-stretch">
+            {/* Config file */}
+            <div className="bg-gh-card border border-gh-border rounded-xl overflow-hidden flex flex-col">
+              <div className="px-5 py-3 border-b border-gh-border bg-gh-bg">
+                <span className="text-gh-muted text-sm font-mono">
+                  .wtcrc.json
+                </span>
+              </div>
+              <pre className="p-5 text-sm font-mono text-gh-text whitespace-pre-wrap break-words flex-1 flex items-center">
+{`{
+  "sync": [
+    ".generated/prisma-client",
+    "local-certs/"
+  ],
+  "envOverrides": {
+    "VITE_API_URL":
+      "http://localhost:\${BACKEND_PORT}"
+  }
+}`}
+              </pre>
+            </div>
+
+            {/* Explanations */}
+            <div className="flex flex-col gap-4">
+              <div className="bg-gh-card border border-gh-border rounded-xl p-5 flex-1 flex flex-col justify-center">
+                <div className="flex items-center gap-3 mb-2">
+                  <code className="text-gh-green font-mono font-bold">sync</code>
+                </div>
+                <p className="text-gh-muted text-sm leading-relaxed">
+                  Extra files or directories to copy from main into each
+                  worktree on start. Use for gitignored or generated files that
+                  Docker needs but aren&apos;t committed — like generated clients,
+                  local certificates, or build artifacts.
+                </p>
+              </div>
+              <div className="bg-gh-card border border-gh-border rounded-xl p-5 flex-1 flex flex-col justify-center">
+                <div className="flex items-center gap-3 mb-2">
+                  <code className="text-gh-green font-mono font-bold">envOverrides</code>
+                </div>
+                <p className="text-gh-muted text-sm leading-relaxed">
+                  Additional env vars injected into{" "}
+                  <code className="text-gh-yellow font-mono">.env</code>.
+                  Supports{" "}
+                  <code className="text-gh-yellow font-mono">{`\${VAR}`}</code>{" "}
+                  interpolation with allocated port values — perfect when env
+                  vars depend on allocated ports.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ─── MCP Integration ─── */}
       <section id="mcp" className="py-24 border-t border-gh-border">
         <div className="max-w-5xl mx-auto px-6">
