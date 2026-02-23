@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gh-bg: #0D1117;
+  --color-gh-card: #161B22;
+  --color-gh-card-hover: #1C2333;
+  --color-gh-border: #30363D;
+  --color-gh-text: #E6EDF3;
+  --color-gh-muted: #8B949E;
+  --color-gh-blue: #58A6FF;
+  --color-gh-green: #3FB950;
+  --color-gh-red: #F85149;
+  --color-gh-purple: #BC8CFF;
+  --color-gh-orange: #D29922;
+  --color-gh-yellow: #FFA657;
+
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular,
+    "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+/* Subtle glow on install command */
+.glow-blue {
+  box-shadow: 0 0 30px rgba(88, 166, 255, 0.12),
+    0 0 80px rgba(88, 166, 255, 0.04);
+}
+
+/* Feature card hover */
+.card-hover {
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.card-hover:hover {
+  border-color: #58a6ff;
+  box-shadow: 0 0 30px rgba(88, 166, 255, 0.08);
+}
+
+/* Code block scrollbar */
+.code-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.code-scroll::-webkit-scrollbar-track {
+  background: #161b22;
+}
+.code-scroll::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 3px;
+}
