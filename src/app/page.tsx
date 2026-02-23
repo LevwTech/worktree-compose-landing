@@ -216,26 +216,28 @@ export default function Home() {
       </section>
 
       {/* ─── Video ─── */}
-      <section id="demo" className="pb-24">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-2xl font-bold text-center mb-8">
+      <section id="demo" className="pb-28">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-10">
             See it in action
           </h2>
-          <div className="rounded-xl overflow-hidden border border-gh-border shadow-2xl">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              controls
-              className="w-full"
-            >
-              <source
-                src="https://github.com/LevwTech/worktree-compose/raw/main/wtc-explainer.mp4"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
+          <div className="rounded-2xl overflow-hidden border-2 border-gh-border shadow-[0_0_60px_rgba(88,166,255,0.1)] bg-gh-card p-2">
+            <div className="rounded-xl overflow-hidden">
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                controls
+                className="w-full"
+              >
+                <source
+                  src="https://github.com/LevwTech/worktree-compose/raw/main/wtc-explainer.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         </div>
       </section>
