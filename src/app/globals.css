@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 @theme {
   --color-gh-bg: #0D1117;
   --color-gh-card: #161B22;

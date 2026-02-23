@@ -182,9 +182,9 @@ export default function Home() {
           </p>
 
           {/* Install command */}
-          <div className="glow-blue inline-flex items-center gap-3 bg-gh-card border border-gh-border rounded-xl px-6 py-4 mb-8">
-            <span className="text-gh-muted font-mono">$</span>
-            <code className="text-gh-green font-mono text-lg sm:text-xl font-medium">
+          <div className="glow-blue flex items-center gap-3 bg-gh-card border border-gh-border rounded-xl px-6 py-4 mb-8 max-w-full w-fit mx-auto min-w-0">
+            <span className="text-gh-muted font-mono shrink-0">$</span>
+            <code className="text-gh-green font-mono text-lg sm:text-xl font-medium truncate">
               npm i worktree-compose
             </code>
             <CopyButton text="npm i worktree-compose" />
@@ -379,8 +379,8 @@ export default function Home() {
           </p>
 
           {/* Formula */}
-          <div className="flex justify-center mb-10">
-            <div className="inline-flex items-center gap-2 bg-gh-card border border-gh-border rounded-xl px-8 py-4 font-mono text-lg">
+          <div className="flex justify-center mb-10 px-4">
+            <div className="inline-flex flex-wrap items-center justify-center gap-2 bg-gh-card border border-gh-border rounded-xl px-6 py-4 font-mono text-base sm:text-lg max-w-full">
               <span className="text-gh-yellow font-bold">port</span>
               <span className="text-gh-muted">=</span>
               <span className="text-gh-blue">20000</span>
