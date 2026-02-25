@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -30,6 +31,11 @@ export default function RootLayout({
       </head>
       <body className="bg-gh-bg text-gh-text font-sans antialiased">
         {children}
+        <Script
+          defer
+          data-url="https://devhunt.org/tool/worktree-compose"
+          src="https://cdn.jsdelivr.net/gh/sidiDev/devhunt-banner/indexV0.js"
+        />
       </body>
     </html>
   );
