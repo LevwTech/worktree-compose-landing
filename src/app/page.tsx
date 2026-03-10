@@ -157,6 +157,21 @@ export default function Home() {
       {/* ─── Hero ─── */}
       <section className="pt-24 pb-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
+          {/* Dev Hunt Badge */}
+          <div className="mb-6">
+            <a
+              href="https://devhunt.org/tool/worktree-compose"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#f97316]/10 text-[#f97316] border border-[#f97316]/20 hover:bg-[#f97316]/20 hover:border-[#f97316]/30 transition-all text-sm font-medium"
+            >
+              <span>🏆 #1 Product of the Week on Dev Hunt</span>
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+          </div>
+
           {/* npm badge */}
           <a
             href="https://www.npmjs.com/package/worktree-compose"
@@ -467,7 +482,7 @@ export default function Home() {
                 </span>
               </div>
               <pre className="p-5 text-sm font-mono text-gh-text whitespace-pre-wrap break-words flex-1 flex items-center">
-{`{
+                {`{
   "sync": [
     ".generated/prisma-client",
     "local-certs/"
@@ -532,7 +547,7 @@ export default function Home() {
                 </span>
               </div>
               <pre className="p-5 text-sm font-mono text-gh-text overflow-x-auto code-scroll">
-{`{
+                {`{
   "mcpServers": {
     "wtc": {
       "command": "npx",
@@ -551,7 +566,7 @@ export default function Home() {
                 </span>
               </div>
               <pre className="p-5 text-sm font-mono text-gh-text overflow-x-auto code-scroll">
-{`{
+                {`{
   "servers": {
     "wtc": {
       "command": "npx",
@@ -583,9 +598,8 @@ export default function Home() {
                 {MCP_TOOLS.map((t, i) => (
                   <tr
                     key={t.tool}
-                    className={`border-b border-gh-border last:border-0 ${
-                      i % 2 === 0 ? "bg-gh-bg" : "bg-gh-card/50"
-                    }`}
+                    className={`border-b border-gh-border last:border-0 ${i % 2 === 0 ? "bg-gh-bg" : "bg-gh-card/50"
+                      }`}
                   >
                     <td className="px-6 py-3 font-mono font-medium text-gh-green">
                       {t.tool}
