@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "worktree-compose (wtc)",
     description:
       "Zero-config Docker Compose isolation for git worktrees. Every worktree gets its own ports, database, cache, and containers.",
-    url: "https://github.com/LevwTech/worktree-compose",
+    url: "https://github.com/mostafasudo/worktree-compose",
     type: "website",
   },
 };

@@ -208,7 +208,7 @@ export default function Home() {
           {/* CTAs */}
           <div className="flex items-center justify-center gap-4">
             <a
-              href="https://github.com/LevwTech/worktree-compose"
+              href="https://github.com/mostafasudo/worktree-compose"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-gh-border text-gh-text hover:border-gh-muted transition-colors text-sm font-medium"
@@ -247,7 +247,7 @@ export default function Home() {
                 className="w-full"
               >
                 <source
-                  src="https://github.com/LevwTech/worktree-compose/raw/main/wtc-explainer.mp4"
+                  src="https://github.com/mostafasudo/worktree-compose/raw/main/wtc-explainer.mp4"
                   type="video/mp4"
                 />
                 Your browser does not support the video tag.
@@ -625,7 +625,7 @@ export default function Home() {
             </span>
             <div className="flex items-center gap-6 text-sm text-gh-muted">
               <a
-                href="https://github.com/LevwTech/worktree-compose"
+                href="https://github.com/mostafasudo/worktree-compose"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gh-text transition-colors"
@@ -646,12 +646,12 @@ export default function Home() {
           <span className="text-gh-muted/60 text-sm">
             vibe coded with ❤️ by{" "}
             <a
-              href="https://x.com/levwtech"
+              href="https://x.com/mostafasudo"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gh-muted hover:text-gh-text transition-colors"
             >
-              @levwtech
+              @mostafasudo
             </a>
           </span>
         </div>
