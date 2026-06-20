@@ -244,12 +244,11 @@ export default function Home() {
                 loop
                 playsInline
                 controls
+                preload="metadata"
+                poster="/wtc-poster.png"
                 className="w-full"
               >
-                <source
-                  src="https://github.com/mostafasudo/worktree-compose/raw/main/wtc-explainer.mp4"
-                  type="video/mp4"
-                />
+                <source src="/wtc-explainer.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
