@@ -1,5 +1,9 @@
 import { CopyButton } from "./components/CopyButton";
 import { PortTable } from "./components/PortTable";
+import { SkillActions } from "./components/SkillActions";
+
+const SKILL_INSTALL =
+  "mkdir -p ~/.claude/skills/worktree-compose && curl -fsSL https://raw.githubusercontent.com/mostafasudo/worktree-compose/main/SKILL.md -o ~/.claude/skills/worktree-compose/SKILL.md";
 
 const COMMANDS = [
   {
@@ -200,9 +204,9 @@ export default function Home() {
           <div className="glow-blue flex items-center gap-3 bg-gh-card border border-gh-border rounded-xl px-6 py-4 mb-8 max-w-full w-fit mx-auto min-w-0">
             <span className="text-gh-muted font-mono shrink-0">$</span>
             <code className="text-gh-green font-mono text-lg sm:text-xl font-medium truncate">
-              npm i worktree-compose
+              npm i -g worktree-compose
             </code>
-            <CopyButton text="npm i worktree-compose" />
+            <CopyButton text="npm i -g worktree-compose" />
           </div>
 
           {/* CTAs */}
@@ -611,6 +615,45 @@ export default function Home() {
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Agent Skill ─── */}
+      <section id="skill" className="py-24 border-t border-gh-border">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-4">Agent Skill</h2>
+          <p className="text-gh-muted text-center mb-12 max-w-2xl mx-auto">
+            Teach your AI coding agent the full{" "}
+            <code className="text-gh-yellow font-mono">wtc</code> workflow. Drop
+            the ready-made{" "}
+            <code className="text-gh-yellow font-mono">SKILL.md</code> into your
+            agent — commands, port allocation, config, and the MCP server, all in
+            one file — so it loads in any project.
+          </p>
+
+          <div className="max-w-2xl mx-auto bg-gh-card border border-gh-border rounded-xl overflow-hidden">
+            {/* File header with copy + download */}
+            <div className="px-5 py-3 border-b border-gh-border bg-gh-bg flex items-center justify-between gap-3">
+              <span className="text-gh-muted text-sm font-mono">SKILL.md</span>
+              <SkillActions />
+            </div>
+
+            {/* Install one-liner */}
+            <div className="p-5">
+              <p className="text-gh-muted text-sm mb-3">
+                Or install it for Claude Code in one line:
+              </p>
+              <div className="flex items-center gap-3 bg-gh-bg border border-gh-border rounded-lg px-4 py-3">
+                <span className="text-gh-muted font-mono text-sm shrink-0">
+                  $
+                </span>
+                <code className="text-gh-text font-mono text-sm whitespace-nowrap overflow-x-auto code-scroll flex-1">
+                  {SKILL_INSTALL}
+                </code>
+                <CopyButton text={SKILL_INSTALL} />
+              </div>
+            </div>
           </div>
         </div>
       </section>
